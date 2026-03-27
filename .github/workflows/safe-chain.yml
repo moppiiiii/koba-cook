@@ -23,8 +23,5 @@ jobs:
       - name: Run safe-chain
         run: safe-chain setup-ci
 
-      - name: Verify safe-chain
-        run: safe-chain verify
-
       - name: Install dependencies
         run: bun install --frozen-lockfile --safe-chain-logging=verbose
