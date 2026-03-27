@@ -1,0 +1,22 @@
+{
+  "projectName": "koba-cook",
+  "mode": "file-router",
+  "typescript": true,
+  "packageManager": "bun",
+  "includeExamples": true,
+  "tailwind": true,
+  "addOnOptions": {},
+  "envVarValues": {},
+  "git": false,
+  "routerOnly": false,
+  "version": 1,
+  "framework": "react",
+  "chosenAddOns": [
+    "biome",
+    "form",
+    "mcp",
+    "shadcn",
+    "t3env",
+    "tanstack-query"
+  ]
+}
