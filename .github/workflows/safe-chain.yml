@@ -1,0 +1,27 @@
+name: Safe Chain
+
+on:
+  pull_request:
+
+jobs:
+  checks:
+    name: Safe Chain Checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install safe-chain
+        run: bun i -g @aikidosec/safe-chain
+
+      - name: Run safe-chain
+        run: safe-chain setup-ci
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile --safe-chain-logging=verbose
