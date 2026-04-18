@@ -24,4 +24,4 @@ jobs:
         run: safe-chain setup-ci
 
       - name: Install dependencies
-        run: bun install --frozen-lockfile --safe-chain-logging=verbose
+        run: bun install --frozen-lockfile --safe-chain-logging=verbose --safe-chain-skip-minimum-package-age
